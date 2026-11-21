@@ -5,12 +5,20 @@ document.addEventListener("DOMContentLoaded", () => {
   const yearEl = document.getElementById("currentYear");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-  // 2. Efeito de scroll no cabeçalho e menu mobile
+  // 2. Efeito de scroll no cabeçalho e controle completo do menu mobile
   const header = document.getElementById("header");
   const menuToggle = document.getElementById("menuToggle");
   const navLinks = document.getElementById("navLinks");
 
+  const closeMobileMenu = () => {
+    if (!menuToggle || !navLinks) return;
+    navLinks.classList.remove("open");
+    menuToggle.classList.remove("active");
+    menuToggle.setAttribute("aria-expanded", "false");
+  };
+
   window.addEventListener("scroll", () => {
+    if (!header) return;
     if (window.scrollY > 40) {
       header.classList.add("scrolled");
     } else {
@@ -19,12 +27,36 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   if (menuToggle && navLinks) {
-    menuToggle.addEventListener("click", () => {
-      navLinks.classList.toggle("open");
+    menuToggle.setAttribute("aria-expanded", "false");
+
+    menuToggle.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const isOpen = navLinks.classList.toggle("open");
+      menuToggle.classList.toggle("active", isOpen);
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
     });
 
     navLinks.querySelectorAll("a").forEach((link) => {
-      link.addEventListener("click", () => navLinks.classList.remove("open"));
+      link.addEventListener("click", closeMobileMenu);
+    });
+
+    // Fecha o menu ao tocar fora ou redimensionar para desktop
+    document.addEventListener("click", (e) => {
+      if (
+        navLinks.classList.contains("open") &&
+        !navLinks.contains(e.target) &&
+        !menuToggle.contains(e.target)
+      ) {
+        closeMobileMenu();
+      }
+    });
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") closeMobileMenu();
+    });
+
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 960) closeMobileMenu();
     });
   }
 
@@ -117,7 +149,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       });
     },
-    { threshold: 0.12 }
+    { threshold: 0.1 }
   );
 
   revealElements.forEach((el) => revealObserver.observe(el));
