@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const yearEl = document.getElementById("currentYear");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-  // 2. Efeito de scroll no cabeçalho e controle completo do menu mobile
+  // 2. Controle do Cabeçalho e Menu Mobile
   const header = document.getElementById("header");
   const menuToggle = document.getElementById("menuToggle");
   const navLinks = document.getElementById("navLinks");
@@ -40,7 +40,6 @@ document.addEventListener("DOMContentLoaded", () => {
       link.addEventListener("click", closeMobileMenu);
     });
 
-    // Fecha o menu ao tocar fora ou redimensionar para desktop
     document.addEventListener("click", (e) => {
       if (
         navLinks.classList.contains("open") &&
@@ -60,56 +59,188 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // 3. Seletor Interativo de Combos TV no Plano HIGH SPEED 1 GIGA
+  // 3. Catálogo Oficial de Logos dos Canais e Combos do Plano 1 GIGA (Fiel à arte)
+  const ALL_32_CHANNELS = [
+    { name: "Premiere", file: "premiere.png" },
+    { name: "SporTV", file: "sportv.svg" },
+    { name: "Combate", file: "combate.png" },
+    { name: "Animal Planet", file: "animalplanet.webp" },
+    { name: "Discovery", file: "discovery.png" },
+    { name: "Universal+", file: "universal.png" },
+    { name: "Sony One", file: "sonyone.jpg", darkBg: true },
+    { name: "Telecine", file: "telecine.png" },
+    { name: "ESPN", file: "espn.png" },
+    { name: "GE TV", file: "getv.png" },
+    { name: "TNT", file: "tnt.svg" },
+    { name: "TNT Series", file: "tntseries.svg" },
+    { name: "Megapix", file: "megapix.webp" },
+    { name: "Multishow", file: "multishow.webp" },
+    { name: "HGTV", file: "hgtv.webp" },
+    { name: "GNT", file: "gnt.svg" },
+    { name: "AMC", file: "amc.png" },
+    { name: "Universal TV", file: "universaltv.png" },
+    { name: "Studio Universal", file: "studiouniversal.png" },
+    { name: "USA", file: "usa.svg" },
+    { name: "TLC", file: "TLC.webp" },
+    { name: "ID", file: "id.webp" },
+    { name: "Space", file: "space.svg" },
+    { name: "Food Network", file: "foodnetwork.webp" },
+    { name: "Discovery Turbo", file: "turbo.webp" },
+    { name: "TCM", file: "tcm.svg" },
+    { name: "Discovery H&H", file: "h&h.png" },
+    { name: "CNN Brasil", file: "CNN.png" },
+    { name: "GloboNews", file: "globonews.png" },
+    { name: "Gloob", file: "gloob.webp" },
+    { name: "Discovery Kids", file: "discoverykids.webp" },
+    { name: "Canal Off", file: "canaloff.png" }
+  ];
+
+  const GIGA_COMBOS = {
+    internet: {
+      whatsappName: "Só Internet (Sem TV)",
+      badgeTitle: "⚡ PLANO SÓ INTERNET FIBRA",
+      priceInt: "129",
+      priceCents: ",90",
+      totalChannels: 0,
+      desc: "1 Giga de fibra óptica pura com Modem Wi-Fi 6 incluso. Selecione um combo acima caso queira incluir canais ao vivo e streamings.",
+      channels: []
+    },
+    powerplay: {
+      whatsappName: "Power Play (68 canais)",
+      badgeTitle: "🎬 POWER PLAY • 68 CANAIS",
+      priceInt: "139",
+      priceCents: ",90",
+      totalChannels: 68,
+      desc: "Inclui 68 canais ao vivo e sob demanda: SporTV, ESPN, Megapix, Canal Off e muito mais.",
+      channels: [
+        { name: "SporTV", file: "sportv.svg" },
+        { name: "ESPN", file: "espn.png" },
+        { name: "Megapix", file: "megapix.webp" },
+        { name: "Canal Off", file: "canaloff.png" }
+      ]
+    },
+    esporte: {
+      whatsappName: "Power Esporte Clube (71 canais)",
+      badgeTitle: "⚽ POWER ESPORTE CLUBE • 71 CANAIS",
+      priceInt: "169",
+      priceCents: ",90",
+      totalChannels: 71,
+      desc: "Futebol ao vivo com Premiere incluso + GNT, SporTV, Universal+, Sony One e muito mais.",
+      channels: [
+        { name: "Premiere", file: "premiere.png" },
+        { name: "GNT", file: "gnt.svg" },
+        { name: "SporTV", file: "sportv.svg" },
+        { name: "Universal+", file: "universal.png" },
+        { name: "Sony One", file: "sonyone.jpg", darkBg: true }
+      ]
+    },
+    elite: {
+      whatsappName: "Power Elite (99 canais)",
+      badgeTitle: "🏆 POWER ELITE • 99 CANAIS",
+      priceInt: "199",
+      priceCents: ",90",
+      totalChannels: 99,
+      desc: "Futebol ao vivo com Premiere, SporTV, Combate, Animal Planet, Discovery, Universal+, Sony One e muito mais.",
+      channels: ALL_32_CHANNELS
+    }
+  };
+
+  let currentComboKey = "elite";
+  let isLogosExpanded = false;
+
   const comboButtons = document.querySelectorAll("#gigaComboOptions .combo-btn");
   const gigaPriceInt = document.getElementById("gigaPriceInt");
   const gigaPriceCents = document.getElementById("gigaPriceCents");
+  const gigaComboTitle = document.getElementById("gigaComboTitle");
   const gigaComboDesc = document.getElementById("gigaComboDesc");
+  const gigaLogosGrid = document.getElementById("gigaLogosGrid");
+  const toggleAllLogosBtn = document.getElementById("toggleAllLogosBtn");
   const gigaWhatsappBtn = document.getElementById("gigaWhatsappBtn");
+
+  const renderGigaCombo = (comboKey) => {
+    const data = GIGA_COMBOS[comboKey];
+    if (!data) return;
+
+    if (gigaPriceInt) gigaPriceInt.textContent = data.priceInt;
+    if (gigaPriceCents) gigaPriceCents.textContent = data.priceCents;
+    if (gigaComboTitle) gigaComboTitle.textContent = data.badgeTitle;
+    if (gigaComboDesc) gigaComboDesc.textContent = data.desc;
+
+    if (gigaWhatsappBtn) {
+      const msg = `Olá! Quero assinar o plano HIGH SPEED 1 GIGA + ${data.whatsappName} por R$ ${data.priceInt}${data.priceCents}/mês.`;
+      gigaWhatsappBtn.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
+    }
+
+    if (!gigaLogosGrid) return;
+    gigaLogosGrid.innerHTML = "";
+
+    if (data.channels.length === 0) {
+      if (toggleAllLogosBtn) toggleAllLogosBtn.style.display = "none";
+      const notice = document.createElement("div");
+      notice.className = "internet-only-notice";
+      notice.textContent = "Sem pacotes de TV neste plano. Clique em Power Play, Esporte ou Elite acima para ver os canais.";
+      gigaLogosGrid.appendChild(notice);
+      return;
+    }
+
+    const previewLimit = 7;
+    const hasMoreToExpand = data.channels.length > previewLimit;
+
+    if (toggleAllLogosBtn) {
+      toggleAllLogosBtn.style.display = hasMoreToExpand ? "inline-block" : "none";
+      toggleAllLogosBtn.textContent = isLogosExpanded
+        ? "Recolher grade"
+        : `Ver todos (${data.channels.length})`;
+    }
+
+    const visibleChannels = isLogosExpanded
+      ? data.channels
+      : data.channels.slice(0, previewLimit);
+
+    visibleChannels.forEach((ch) => {
+      const item = document.createElement("div");
+      item.className = ch.darkBg ? "channel-logo-item dark-logo" : "channel-logo-item";
+      item.title = ch.name;
+
+      const img = document.createElement("img");
+      img.src = ch.file;
+      img.alt = ch.name;
+      img.loading = "lazy";
+
+      item.appendChild(img);
+      gigaLogosGrid.appendChild(item);
+    });
+
+    const remainingCount = data.totalChannels - visibleChannels.length;
+    if (remainingCount > 0) {
+      const moreTile = document.createElement("div");
+      moreTile.className = "channel-logo-more";
+      moreTile.innerHTML = `<span>+${remainingCount} canais</span>`;
+      gigaLogosGrid.appendChild(moreTile);
+    }
+  };
 
   comboButtons.forEach((btn) => {
     btn.addEventListener("click", () => {
       comboButtons.forEach((b) => b.classList.remove("active"));
       btn.classList.add("active");
-
-      const comboName = btn.dataset.name;
-      const priceInt = btn.dataset.int;
-      const priceCents = btn.dataset.cents;
-      const comboDesc = btn.dataset.desc;
-
-      if (gigaPriceInt) gigaPriceInt.textContent = priceInt;
-      if (gigaPriceCents) gigaPriceCents.textContent = priceCents;
-      if (gigaComboDesc) gigaComboDesc.textContent = comboDesc;
-
-      if (gigaWhatsappBtn) {
-        const message = `Olá! Quero assinar o plano HIGH SPEED 1 GIGA + ${comboName} por R$ ${priceInt}${priceCents}/mês.`;
-        gigaWhatsappBtn.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
-      }
+      currentComboKey = btn.dataset.combo;
+      isLogosExpanded = false;
+      renderGigaCombo(currentComboKey);
     });
   });
 
-  // 4. Filtro de Categorias na Grade de Canais Alta TV
-  const filterChips = document.querySelectorAll("#channelFilters .filter-chip");
-  const channelTiles = document.querySelectorAll("#channelsGrid .channel-tile");
-
-  filterChips.forEach((chip) => {
-    chip.addEventListener("click", () => {
-      filterChips.forEach((c) => c.classList.remove("active"));
-      chip.classList.add("active");
-
-      const selectedCategory = chip.dataset.filter;
-
-      channelTiles.forEach((tile) => {
-        if (selectedCategory === "all" || tile.dataset.cat === selectedCategory) {
-          tile.classList.remove("hidden");
-        } else {
-          tile.classList.add("hidden");
-        }
-      });
+  if (toggleAllLogosBtn) {
+    toggleAllLogosBtn.addEventListener("click", () => {
+      isLogosExpanded = !isLogosExpanded;
+      renderGigaCombo(currentComboKey);
     });
-  });
+  }
 
-  // 5. Formulário de Consulta de Cobertura -> WhatsApp
+  // Inicializa a grade do combo Power Elite por padrão
+  renderGigaCombo(currentComboKey);
+
+  // 4. Formulário de Consulta de Cobertura -> WhatsApp
   const coverageForm = document.getElementById("coverageForm");
   if (coverageForm) {
     coverageForm.addEventListener("submit", (e) => {
@@ -127,7 +258,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // 6. Accordion de Perguntas Frequentes (FAQ)
+  // 5. Accordion de Perguntas Frequentes (FAQ)
   const accordionItems = document.querySelectorAll("#faqAccordion .accordion-item");
   accordionItems.forEach((item) => {
     const headerBtn = item.querySelector(".accordion-header");
@@ -138,7 +269,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // 7. Animação de Revelação Suave (Scroll Reveal)
+  // 6. Animação de Revelação Suave (Scroll Reveal)
   const revealElements = document.querySelectorAll(".reveal");
   const revealObserver = new IntersectionObserver(
     (entries) => {

@@ -1,6 +1,6 @@
 /* =========================================================
    ALTA LINK INTERNET — IDENTIDADE VISUAL DARK & GOLD PREMIUM
-   RESPONSIVO PARA DESKTOP, TABLET E MOBILE
+   COM LOGOS DE CANAIS ATRELADAS AOS COMBOS & RESPONSIVIDADE
    ========================================================= */
 :root {
   --bg-obsidian: #06080f;
@@ -72,13 +72,13 @@ img, svg {
 
 .container {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1220px;
   margin: 0 auto;
   padding: 0 24px;
 }
 
 /* =========================================================
-   ELEMENTOS GRÁFICOS DE FUNDO (ORBS, GRADE & FORMAS)
+   ELEMENTOS GRÁFICOS DE FUNDO
    ========================================================= */
 .bg-effects {
   position: fixed;
@@ -181,7 +181,7 @@ img, svg {
 .section-desc {
   color: var(--text-muted);
   font-size: clamp(0.96rem, 1.4vw, 1.05rem);
-  max-width: 620px;
+  max-width: 640px;
 }
 
 .btn {
@@ -239,7 +239,7 @@ img, svg {
 }
 
 /* =========================================================
-   HEADER FLUTUANTE (PILL NAVBAR)
+   HEADER FLUTUANTE
    ========================================================= */
 .header {
   position: fixed;
@@ -284,7 +284,7 @@ img, svg {
 }
 
 .logo-img {
-  height: 48px;
+  height: 50px;
   width: auto;
   display: block;
   mix-blend-mode: lighten;
@@ -460,7 +460,6 @@ img, svg {
   flex-shrink: 0;
 }
 
-/* Visual Card Hero */
 .hero-visual {
   position: relative;
   width: 100%;
@@ -613,7 +612,7 @@ img, svg {
 
 .section-header-center {
   text-align: center;
-  max-width: 720px;
+  max-width: 740px;
   margin: 0 auto 56px;
 }
 
@@ -704,20 +703,20 @@ img, svg {
 }
 
 /* =========================================================
-   PLANOS & COMBOS (3 COLUNAS + SELETOR INTERATIVO 1 GIGA)
+   PLANOS & COMBOS COM LOGOS DOS CANAIS INTEGRADOS
    ========================================================= */
 .pricing-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 26px;
-  align-items: center;
+  grid-template-columns: 0.95fr 1.18fr 0.95fr;
+  gap: 24px;
+  align-items: start;
 }
 
 .plan-card {
   background: var(--bg-card);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-lg);
-  padding: 36px 28px;
+  padding: 34px 24px;
   position: relative;
   transition: var(--transition);
 }
@@ -727,10 +726,10 @@ img, svg {
 }
 
 .plan-card-featured {
-  background: linear-gradient(180deg, rgba(22, 30, 52, 0.95) 0%, rgba(11, 16, 29, 0.98) 100%);
+  background: linear-gradient(180deg, rgba(22, 30, 52, 0.96) 0%, rgba(11, 16, 29, 0.99) 100%);
   border: 2px solid var(--gold-primary);
-  padding: 46px 30px 38px;
-  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.65), 0 0 40px rgba(226, 174, 91, 0.14);
+  padding: 44px 26px 34px;
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.65), 0 0 40px rgba(226, 174, 91, 0.16);
 }
 
 .plan-top-badge {
@@ -774,13 +773,12 @@ img, svg {
 .plan-tagline {
   font-size: 0.9rem;
   color: var(--text-muted);
-  min-height: 44px;
 }
 
 .plan-price-box {
   display: flex;
   align-items: flex-start;
-  margin: 22px 0;
+  margin: 20px 0;
 }
 
 .plan-price-box .currency {
@@ -819,41 +817,34 @@ img, svg {
   color: var(--text-muted);
 }
 
-.plan-divider {
-  height: 1px;
-  background: var(--border-subtle);
-  margin: 20px 0;
-}
-
 /* Seletor Interativo 1 Giga */
 .combo-selector-box {
-  background: rgba(6, 8, 15, 0.65);
+  background: rgba(6, 8, 15, 0.72);
   border: 1px solid var(--border-gold);
   border-radius: var(--radius-md);
-  padding: 14px;
-  margin-bottom: 22px;
+  padding: 12px;
+  margin-bottom: 16px;
 }
 
 .combo-selector-label {
   display: block;
-  font-size: 0.78rem;
+  font-size: 0.76rem;
   font-weight: 600;
   color: var(--gold-light);
-  margin-bottom: 10px;
+  margin-bottom: 9px;
 }
 
 .combo-options {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 8px;
-  margin-bottom: 10px;
 }
 
 .combo-btn {
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-sm);
-  padding: 10px;
+  padding: 9px 10px;
   text-align: left;
   color: var(--text-muted);
   cursor: pointer;
@@ -863,20 +854,20 @@ img, svg {
 
 .combo-btn span {
   display: block;
-  font-size: 0.74rem;
+  font-size: 0.72rem;
   line-height: 1.25;
 }
 
 .combo-btn strong {
   display: block;
-  font-size: 0.86rem;
+  font-size: 0.85rem;
   color: var(--text-white);
-  margin-top: 3px;
+  margin-top: 2px;
 }
 
 .combo-btn:hover,
 .combo-btn.active {
-  background: rgba(226, 174, 91, 0.16);
+  background: rgba(226, 174, 91, 0.18);
   border-color: var(--gold-primary);
   color: var(--text-white);
 }
@@ -885,24 +876,146 @@ img, svg {
   color: var(--gold-light);
 }
 
-.combo-dynamic-desc {
+/* Caixa de Logos dos Canais Dentro de Cada Plano */
+.plan-channels-box {
+  background: rgba(6, 8, 15, 0.65);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 14px;
+  margin-bottom: 22px;
+}
+
+.plan-channels-featured {
+  border-color: var(--border-gold);
+  background: rgba(7, 10, 19, 0.82);
+}
+
+.plan-channels-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.channels-badge-title {
+  font-family: "Outfit", sans-serif;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--gold-light);
+}
+
+.expand-logos-btn {
+  background: rgba(226, 174, 91, 0.14);
+  border: 1px solid var(--border-gold);
+  color: var(--gold-light);
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: var(--transition);
+  white-space: nowrap;
+}
+
+.expand-logos-btn:hover {
+  background: var(--gold-gradient);
+  color: #080b14;
+}
+
+.channel-logos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(68px, 1fr));
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+/* Pill clara para garantir leitura perfeita de logos escuras ou claras */
+.channel-logo-item {
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 8px;
+  height: 38px;
+  padding: 5px 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+  overflow: hidden;
+}
+
+.channel-logo-item:hover {
+  transform: translateY(-2px) scale(1.04);
+  border-color: var(--gold-primary);
+  box-shadow: 0 6px 16px rgba(226, 174, 91, 0.28);
+}
+
+.channel-logo-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* Ajuste específico e zoom para logos com fundo escuro sólido (sonyone.jpg) */
+.channel-logo-item.dark-logo {
+  background: #0b0e18;
+  padding: 0;
+}
+
+.channel-logo-item.dark-logo img,
+.channel-logo-item img[src*="sonyone"] {
+  transform: scale(1.45);
+  object-fit: cover;
+}
+
+.channel-logo-more {
+  background: rgba(226, 174, 91, 0.12);
+  border: 1px dashed var(--border-gold);
+  border-radius: 8px;
+  height: 38px;
+  padding: 4px 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: "Outfit", sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--gold-light);
+}
+
+.internet-only-notice {
+  grid-column: 1 / -1;
+  background: rgba(226, 174, 91, 0.08);
+  border: 1px dashed var(--border-gold);
+  border-radius: 10px;
+  padding: 14px 12px;
+  text-align: center;
   font-size: 0.8rem;
+  color: var(--gold-light);
+}
+
+.plan-channels-note {
+  font-size: 0.76rem;
   color: var(--text-muted);
-  line-height: 1.45;
+  line-height: 1.4;
 }
 
 .plan-features {
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  margin-bottom: 28px;
+  gap: 10px;
+  margin-bottom: 24px;
 }
 
 .plan-features li {
   display: flex;
   align-items: flex-start;
   gap: 10px;
-  font-size: 0.92rem;
+  font-size: 0.9rem;
   color: var(--text-muted);
 }
 
@@ -916,47 +1029,12 @@ img, svg {
   flex-shrink: 0;
 }
 
-/* Banner HBO MAX */
-.hbo-banner {
-  margin-top: 38px;
-  background: linear-gradient(90deg, rgba(226, 174, 91, 0.14), rgba(15, 21, 36, 0.9));
-  border: 1px solid var(--border-gold);
-  border-radius: var(--radius-md);
-  padding: 20px 28px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.hbo-banner-content {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  flex-wrap: wrap;
-}
-
-.hbo-pill {
-  background: #ffffff;
-  color: #090c15;
-  font-family: "Outfit", sans-serif;
-  font-weight: 800;
-  font-size: 0.9rem;
-  padding: 6px 14px;
-  border-radius: 8px;
-  letter-spacing: -0.02em;
-  flex-shrink: 0;
-}
-
-/* =========================================================
-   ALTA TV & CANAIS
-   ========================================================= */
+/* 3 Pilares da Alta TV (Abaixo dos Planos) */
 .tv-perks-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  margin-bottom: 32px;
+  margin-top: 42px;
 }
 
 .tv-perk-card {
@@ -989,117 +1067,46 @@ img, svg {
 }
 
 .tv-perk-card h4 {
-  font-size: 1.08rem;
+  font-size: 1.06rem;
   margin-bottom: 4px;
 }
 
 .tv-perk-card p {
-  font-size: 0.88rem;
+  font-size: 0.87rem;
   color: var(--text-muted);
 }
 
-.streaming-highlights {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 18px;
-  margin-bottom: 42px;
-}
-
-.stream-highlight-card {
-  background: var(--bg-card-solid);
-  border: 1px solid var(--border-subtle);
+/* Banner HBO MAX */
+.hbo-banner {
+  margin-top: 28px;
+  background: linear-gradient(90deg, rgba(226, 174, 91, 0.14), rgba(15, 21, 36, 0.9));
+  border: 1px solid var(--border-gold);
   border-radius: var(--radius-md);
-  padding: 22px 18px;
-  text-align: center;
-}
-
-.stream-badge {
-  display: inline-block;
-  font-family: "Outfit", sans-serif;
-  font-weight: 800;
-  font-size: 0.88rem;
-  letter-spacing: 0.06em;
-  padding: 8px 16px;
-  border-radius: 8px;
-  color: #ffffff;
-  margin-bottom: 12px;
-}
-
-.bg-green { background: #15803d; }
-.bg-red { background: #dc2626; }
-.bg-indigo { background: #4338ca; }
-.bg-magenta { background: linear-gradient(135deg, #2563eb, #db2777); }
-
-.stream-highlight-card strong {
-  display: block;
-  font-size: 1rem;
-  margin-bottom: 4px;
-}
-
-.stream-highlight-card small {
-  color: var(--text-muted);
-  font-size: 0.82rem;
-}
-
-.channel-filters {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-bottom: 28px;
-}
-
-.filter-chip {
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid var(--border-subtle);
-  color: var(--text-muted);
-  padding: 9px 18px;
-  border-radius: 999px;
-  font-size: 0.86rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: var(--transition);
-}
-
-.filter-chip:hover,
-.filter-chip.active {
-  background: var(--gold-gradient);
-  color: #080b14;
-  border-color: transparent;
-}
-
-.channels-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(132px, 1fr));
-  gap: 12px;
-}
-
-.channel-tile {
-  background: linear-gradient(145deg, var(--tile-accent, #1e293b), #0c111e 85%);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 12px;
-  padding: 16px 10px;
-  text-align: center;
-  font-family: "Outfit", sans-serif;
-  font-weight: 700;
-  font-size: 0.82rem;
-  letter-spacing: 0.04em;
-  color: #ffffff;
-  transition: var(--transition);
+  padding: 20px 28px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  min-height: 58px;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
-.channel-tile:hover {
-  transform: translateY(-3px);
-  border-color: var(--gold-light);
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.45);
+.hbo-banner-content {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
 }
 
-.channel-tile.hidden {
-  display: none;
+.hbo-pill {
+  background: #ffffff;
+  color: #090c15;
+  font-family: "Outfit", sans-serif;
+  font-weight: 800;
+  font-size: 0.9rem;
+  padding: 6px 14px;
+  border-radius: 8px;
+  letter-spacing: -0.02em;
+  flex-shrink: 0;
 }
 
 /* =========================================================
@@ -1243,7 +1250,7 @@ img, svg {
   padding: 13px 14px;
   color: var(--text-white);
   font-family: "Plus Jakarta Sans", sans-serif;
-  font-size: 16px; /* Evita zoom automático no Safari iOS */
+  font-size: 16px;
   transition: var(--transition);
 }
 
@@ -1426,7 +1433,7 @@ img, svg {
   opacity: 1;
 }
 
-/* Animação Reveal ao Rolar */
+/* Animação Reveal */
 .reveal {
   opacity: 0;
   transform: translateY(24px);
@@ -1439,8 +1446,20 @@ img, svg {
 }
 
 /* =========================================================
-   RESPONSIVIDADE — NOTEBOOKS PEQUENOS E TABLETS (<= 1024px)
+   RESPONSIVIDADE
    ========================================================= */
+@media (max-width: 1080px) {
+  .pricing-grid {
+    grid-template-columns: 1fr;
+    max-width: 620px;
+    margin-inline: auto;
+  }
+
+  .plan-card-featured {
+    margin-top: 12px;
+  }
+}
+
 @media (max-width: 1024px) {
   .hero {
     padding: 135px 0 80px;
@@ -1468,23 +1487,10 @@ img, svg {
   }
 
   .features-grid,
-  .pricing-grid,
   .tv-perks-grid {
     grid-template-columns: 1fr;
-    max-width: 600px;
+    max-width: 620px;
     margin-inline: auto;
-  }
-
-  .plan-tagline {
-    min-height: auto;
-  }
-
-  .plan-card-featured {
-    margin-top: 12px;
-  }
-
-  .streaming-highlights {
-    grid-template-columns: repeat(2, 1fr);
   }
 
   .footer-grid {
@@ -1497,9 +1503,6 @@ img, svg {
   }
 }
 
-/* =========================================================
-   RESPONSIVIDADE — MENU TABLET & MOBILE (<= 960px)
-   ========================================================= */
 @media (max-width: 960px) {
   .navbar {
     padding: 9px 14px 9px 18px;
@@ -1550,9 +1553,6 @@ img, svg {
   }
 }
 
-/* =========================================================
-   RESPONSIVIDADE — SMARTPHONES (<= 640px)
-   ========================================================= */
 @media (max-width: 640px) {
   .container {
     padding: 0 16px;
@@ -1635,6 +1635,11 @@ img, svg {
     padding: 38px 20px 28px;
   }
 
+  .channel-logos-grid {
+    grid-template-columns: repeat(auto-fill, minmax(64px, 1fr));
+    gap: 7px;
+  }
+
   .hbo-banner {
     padding: 20px;
     flex-direction: column;
@@ -1643,26 +1648,6 @@ img, svg {
 
   .hbo-banner .btn {
     width: 100%;
-  }
-
-  .streaming-highlights {
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
-  }
-
-  .stream-highlight-card {
-    padding: 18px 12px;
-  }
-
-  .channels-grid {
-    grid-template-columns: repeat(auto-fill, minmax(112px, 1fr));
-    gap: 10px;
-  }
-
-  .channel-tile {
-    font-size: 0.76rem;
-    padding: 14px 8px;
-    min-height: 50px;
   }
 
   .corporate-card {
@@ -1700,9 +1685,6 @@ img, svg {
   }
 }
 
-/* =========================================================
-   RESPONSIVIDADE — TELAS ULTRA COMPACTAS (<= 380px)
-   ========================================================= */
 @media (max-width: 380px) {
   .logo-svg,
   .logo-img {
@@ -1721,7 +1703,6 @@ img, svg {
   }
 
   .combo-options,
-  .streaming-highlights,
   .sla-grid {
     grid-template-columns: 1fr;
   }
@@ -1732,7 +1713,6 @@ img, svg {
   }
 }
 
-/* Desativa tooltip flutuante em dispositivos puramente touch */
 @media (hover: none) {
   .wa-tooltip {
     display: none;

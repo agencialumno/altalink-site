@@ -4,19 +4,21 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Alta Link Internet | Internet à Altura do Seu Padrão</title>
-  <link rel="icon" type="image/png" href="favicon.png" />
-    <link rel="apple-touch-icon" href="favicon.png" />
   <meta name="description" content="Fibra óptica de ultravelocidade até 1 Giga com Modem Wi-Fi 6 e até 99 canais ao vivo e streaming inclusos. Alta Link Internet." />
-  
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="apple-touch-icon" href="favicon.png" />
+
   <!-- Google Fonts: Outfit (Títulos) & Plus Jakarta Sans (Textos) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  
+
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Elementos Gráficos de Fundo (Orbs Dourados, Grade e Formas Geométricas) -->
+  <!-- Elementos Gráficos de Fundo -->
   <div class="bg-effects" aria-hidden="true">
     <div class="bg-grid"></div>
     <div class="glow-orb orb-top-left"></div>
@@ -27,19 +29,15 @@
     <span class="floating-plus plus-3">+</span>
   </div>
 
-  <!-- Cabeçalho Flutuante (Estilo Glassmorphism) -->
+  <!-- Cabeçalho Flutuante -->
   <header class="header" id="header">
     <nav class="navbar container">
-      <a href="#inicio" class="brand-logo" aria-label="Alta Link Internet - Início">
-        <!-- Logo Vetorial Fiel à Identidade Alta Link -->
-        <img src="/semfundo_2.png" alt="Alta Link Internet" class="logo-img" />
-      </a>
+      <img src="/semfundo_2.png" alt="Alta Link Internet" class="logo-img" />
 
       <ul class="nav-links" id="navLinks">
         <li><a href="#inicio">Início</a></li>
         <li><a href="#diferenciais">Diferenciais</a></li>
         <li><a href="#planos">Planos & Combos</a></li>
-        <li><a href="#alta-tv">Alta TV</a></li>
         <li><a href="#empresas">Empresas</a></li>
         <li><a href="#faq">Dúvidas</a></li>
       </ul>
@@ -63,7 +61,6 @@
   <main>
     <!-- HERO SECTION -->
     <section class="hero" id="inicio">
-      <!-- Ondas Gráficas de Fibra Óptica -->
       <svg class="hero-fiber-waves" viewBox="0 0 1440 520" fill="none" preserveAspectRatio="none" aria-hidden="true">
         <path d="M-80 390C240 240 520 490 860 310C1140 160 1320 260 1520 140" stroke="url(#fiberGrad1)" stroke-width="1.5" />
         <path d="M-80 430C280 290 540 520 900 350C1180 215 1350 300 1520 195" stroke="url(#fiberGrad2)" stroke-width="1" />
@@ -101,7 +98,7 @@
             <a href="#planos" class="btn btn-gold btn-lg">
               Escolher Meu Plano
             </a>
-            <a href="https://wa.me/5521990862337?text=Ol%C3%A1!%20Quero%20verificar%20a%20disponibilidade%20da%20Alta%20Link%20no%20meu%20endere%C3%A7o." target="_blank" rel="noopener" class="btn btn-outline btn-lg">
+            <a href="#faq" class="btn btn-outline btn-lg">
               Consultar Cobertura
             </a>
           </div>
@@ -124,12 +121,8 @@
           </div>
         </div>
 
-        <!-- Composição Gráfica Premium (Inspirada nos Materiais Alta Link) -->
         <div class="hero-visual reveal">
           <div class="speed-showcase-card">
-            <div class="card-shine"></div>
-
-            <!-- Ícone Wi-Fi Dourado (Referência do material de ponto de acesso) -->
             <div class="golden-wifi-emblem">
               <svg viewBox="0 0 120 90" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <defs>
@@ -149,7 +142,7 @@
             <div class="speed-readout">
               <span class="speed-label">CONEXÃO DEDICADA DE FIBRA</span>
               <div class="speed-number">
-                <span id="heroSpeedCounter">1000</span>
+                <span>1000</span>
                 <small>MEGA</small>
               </div>
               <div class="speed-bars">
@@ -174,19 +167,13 @@
               </div>
             </div>
 
-            <div class="floating-pill pill-stream">
-              <span class="pill-icon">🎬</span>
-              <div>
-                <strong>Premiere + Telecine</strong>
-                <small>Universal+ & Sony One</small>
-              </div>
-            </div>
+          
           </div>
         </div>
       </div>
     </section>
 
-    <!-- DIFERENCIAIS (Estrutura 3 Colunas com Destaque Central) -->
+    <!-- DIFERENCIAIS -->
     <section class="section" id="diferenciais">
       <div class="container">
         <div class="section-header-split reveal">
@@ -253,16 +240,16 @@
       </div>
     </section>
 
-    <!-- PLANOS E COMBOS (Fiel aos Panfletos + Seletor Interativo 1 Giga) -->
+    <!-- PLANOS & COMBOS COM LOGOS DOS CANAIS INTEGRADOS -->
     <section class="section plans-section" id="planos">
       <div class="container">
         <div class="section-header-center reveal">
           <span class="section-tag">ESCOLHA A VELOCIDADE DA SUA CASA</span>
           <h2 class="section-title">
-            Planos sob medida para <span class="text-gold-gradient">conectar tudo.</span>
+            Planos e combos com <span class="text-gold-gradient">canais &amp; streamings inclusos.</span>
           </h2>
           <p class="section-desc">
-            Internet fibra óptica com TV por assinatura e streamings integrados. Sem surpresas e com contratação rápida pelo WhatsApp.
+            Veja exatamente quais canais e plataformas acompanham cada plano. No plano <strong>1 Giga</strong>, alterne entre os combos para visualizar a grade completa.
           </p>
         </div>
 
@@ -284,20 +271,32 @@
               </div>
             </div>
 
-            <div class="plan-divider"></div>
+            <!-- Logos Inclusas no Plano PULSE -->
+            <div class="plan-channels-box">
+              <div class="plan-channels-header">
+                <span class="channels-badge-title">📺 TV INCLUSA • 23 CANAIS</span>
+              </div>
+              <div class="channel-logos-grid">
+                <div class="channel-logo-item" title="CNN Brasil">
+                  <img src="CNN.png" alt="CNN Brasil" loading="lazy" />
+                </div>
+                <div class="channel-logo-item dark-logo" title="Sony One">
+                  <img src="sonyone.jpg" alt="Sony One" loading="lazy" />
+                </div>
+                <div class="channel-logo-item" title="Universal+">
+                  <img src="universal.png" alt="Universal+" loading="lazy" />
+                </div>
+                <div class="channel-logo-more">
+                  <span>+20 canais</span>
+                </div>
+              </div>
+              <p class="plan-channels-note">Inclui CNN Brasil, W Collection, Sony One, Universal+ e mais.</p>
+            </div>
 
             <ul class="plan-features">
               <li>
                 <span class="check-gold">✓</span>
                 <span><strong>600 Mega</strong> 100% Fibra Óptica</span>
-              </li>
-              <li>
-                <span class="check-gold">✓</span>
-                <span><strong>Alta TV inclusa:</strong> 23 canais ao vivo</span>
-              </li>
-              <li>
-                <span class="check-gold">✓</span>
-                <span>CNN Brasil, Sony One, Universal+, W Collection e mais</span>
               </li>
               <li>
                 <span class="check-gold">✓</span>
@@ -310,7 +309,7 @@
             </a>
           </div>
 
-          <!-- PLANO 2 (DESTAQUE CENTRAL): HIGH SPEED 1 GIGA + COMBOS INTERATIVOS -->
+          <!-- PLANO 2 (DESTAQUE CENTRAL): HIGH SPEED 1 GIGA + COMBOS COM LOGOS DINÂMICAS -->
           <div class="plan-card plan-card-featured reveal">
             <div class="plan-top-badge">
               <span>📡 MODEM WI-FI 6 INCLUSO</span>
@@ -331,29 +330,40 @@
               </div>
             </div>
 
-            <!-- Seletor de Combos TV 1 Giga (Fiel ao Panfleto Verso) -->
+            <!-- Seletor Interativo de Combos 1 Giga -->
             <div class="combo-selector-box">
-              <label class="combo-selector-label">Selecione o combo de TV que mais combina com você:</label>
+              <label class="combo-selector-label">Selecione o combo de TV para ver os canais inclusos:</label>
               <div class="combo-options" id="gigaComboOptions">
-                <button type="button" class="combo-btn" data-name="Só Internet (Sem TV)" data-int="129" data-cents=",90" data-desc="1 Giga Fibra Óptica + Modem Wi-Fi 6 de alta performance.">
+                <button type="button" class="combo-btn" data-combo="internet">
                   <span>Só Internet</span>
                   <strong>R$ 129,90</strong>
                 </button>
-                <button type="button" class="combo-btn" data-name="Power Play (68 canais)" data-int="139" data-cents=",90" data-desc="Inclui 68 canais: SporTV, ESPN, Megapix, Canal Off e muito mais.">
+                <button type="button" class="combo-btn" data-combo="powerplay">
                   <span>Power Play • 68 canais</span>
                   <strong>R$ 139,90</strong>
                 </button>
-                <button type="button" class="combo-btn" data-name="Power Esporte Clube (71 canais)" data-int="169" data-cents=",90" data-desc="Inclui 71 canais com Futebol ao Vivo: Premiere, SporTV, GNT e mais.">
+                <button type="button" class="combo-btn" data-combo="esporte">
                   <span>Power Esporte • 71 canais</span>
                   <strong>R$ 169,90</strong>
                 </button>
-                <button type="button" class="combo-btn active" data-name="Power Elite (99 canais)" data-int="199" data-cents=",90" data-desc="Combo Completo 99 canais: Premiere, 6 canais Telecine, Combate, Discovery, Universal+ e Sony One.">
+                <button type="button" class="combo-btn active" data-combo="elite">
                   <span>Power Elite • 99 canais</span>
                   <strong>R$ 199,90</strong>
                 </button>
               </div>
-              <p class="combo-dynamic-desc" id="gigaComboDesc">
-                Combo Completo 99 canais: Premiere, 6 canais Telecine, Combate, Discovery, Universal+ e Sony One.
+            </div>
+
+            <!-- Área Dinâmica das Logos do Combo Selecionado -->
+            <div class="plan-channels-box plan-channels-featured" id="gigaChannelsBox">
+              <div class="plan-channels-header">
+                <span class="channels-badge-title" id="gigaComboTitle">🏆 POWER ELITE • 99 CANAIS</span>
+                <button type="button" class="expand-logos-btn" id="toggleAllLogosBtn">
+                  Ver todos (32)
+                </button>
+              </div>
+              <div class="channel-logos-grid" id="gigaLogosGrid"></div>
+              <p class="plan-channels-note" id="gigaComboDesc">
+                Futebol ao vivo com Premiere, SporTV, Combate, Animal Planet, Discovery, Universal+, Sony One e muito mais.
               </p>
             </div>
 
@@ -365,10 +375,6 @@
               <li>
                 <span class="check-gold">✓</span>
                 <span><strong>Modem Wi-Fi 6</strong> de última geração incluso</span>
-              </li>
-              <li>
-                <span class="check-gold">✓</span>
-                <span>Suporte técnico prioritário Alta Link</span>
               </li>
             </ul>
 
@@ -394,20 +400,26 @@
               </div>
             </div>
 
-            <div class="plan-divider"></div>
+            <!-- Logos Inclusas no Plano TURBO -->
+            <div class="plan-channels-box">
+              <div class="plan-channels-header">
+                <span class="channels-badge-title">🎬 TV INCLUSA • 29 CANAIS</span>
+              </div>
+              <div class="channel-logos-grid">
+                <div class="channel-logo-item" title="Telecine">
+                  <img src="telecine.png" alt="Telecine" loading="lazy" />
+                </div>
+                <div class="channel-logo-more">
+                  <span>+28 canais</span>
+                </div>
+              </div>
+              <p class="plan-channels-note">Inclui Telecine, Itaú Cultural Play, Canal do Artesanato, Dance e mais.</p>
+            </div>
 
             <ul class="plan-features">
               <li>
                 <span class="check-gold">✓</span>
                 <span><strong>800 Mega</strong> 100% Fibra Óptica</span>
-              </li>
-              <li>
-                <span class="check-gold">✓</span>
-                <span><strong>Alta TV inclusa:</strong> 29 canais ao vivo</span>
-              </li>
-              <li>
-                <span class="check-gold">✓</span>
-                <span>Telecine, Itaú Cultural Play, Canal Arte1, Dance e mais</span>
               </li>
               <li>
                 <span class="check-gold">✓</span>
@@ -421,33 +433,7 @@
           </div>
         </div>
 
-        <!-- Banner Adicional HBO MAX (Fiel aos Panfletos e Banner) -->
-        <div class="hbo-banner reveal">
-          <div class="hbo-banner-content">
-            <span class="hbo-pill">HBO max</span>
-            <p>Quer <strong>HBO MAX</strong> no seu plano? Adicione o melhor do cinema e séries ao seu pacote Alta Link.</p>
-          </div>
-          <a href="https://wa.me/5521990862337?text=Ol%C3%A1!%20Quero%20saber%20como%20incluir%20HBO%20MAX%20no%20meu%20plano%20Alta%20Link." target="_blank" rel="noopener" class="btn btn-gold btn-sm">
-            Falar pelo WhatsApp
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ALTA TV & STREAMING -->
-    <section class="section tv-section" id="alta-tv">
-      <div class="container">
-        <div class="section-header-center reveal">
-          <span class="section-tag">ENTRETENIMENTO SEM LIMITES</span>
-          <h2 class="section-title">
-            Futebol ao vivo, filmes e séries <span class="text-gold-gradient">na palma da mão.</span>
-          </h2>
-          <p class="section-desc">
-            Assista na Smart TV, celular ou computador com qualidade digital e recursos pensados para toda a família.
-          </p>
-        </div>
-
-        <!-- 3 Pilares da Alta TV (Fiel ao rodapé do Panfleto Verso) -->
+        <!-- 3 Pilares da Alta TV (Ícones Dourados Identidade Alta Link) -->
         <div class="tv-perks-grid reveal">
           <div class="tv-perk-card">
             <div class="perk-icon">
@@ -513,80 +499,20 @@
           </div>
         </div>
 
-        <!-- Destaques Principais (Premiere, Telecine, Universal+, Sony One) -->
-        <div class="streaming-highlights reveal">
-          <div class="stream-highlight-card border-green">
-            <span class="stream-badge bg-green">PREMIERE</span>
-            <strong>Futebol ao Vivo</strong>
-            <small>Nos combos Esporte Clube e Elite</small>
+        <!-- Banner Adicional HBO MAX -->
+        <div class="hbo-banner reveal">
+          <div class="hbo-banner-content">
+            <span class="hbo-pill">HBO max</span>
+            <p>Quer <strong>HBO MAX</strong> no seu plano? Adicione o melhor do cinema e séries ao seu pacote Alta Link.</p>
           </div>
-          <div class="stream-highlight-card border-red">
-            <span class="stream-badge bg-red">TELECINE</span>
-            <strong>6 Canais de Filmes</strong>
-            <small>Os maiores sucessos do cinema</small>
-          </div>
-          <div class="stream-highlight-card border-indigo">
-            <span class="stream-badge bg-indigo">UNIVERSAL+</span>
-            <strong>Streaming Incluso</strong>
-            <small>Séries exclusivas e produções originais</small>
-          </div>
-          <div class="stream-highlight-card border-magenta">
-            <span class="stream-badge bg-magenta">SONY ONE</span>
-            <strong>Streaming Incluso</strong>
-            <small>Filmes, séries e entretenimento</small>
-          </div>
-        </div>
-
-        <!-- Filtro e Grade de Canais -->
-        <div class="channels-showcase reveal">
-          <div class="channel-filters" id="channelFilters">
-            <button class="filter-chip active" data-filter="all">Todos os Destaques</button>
-            <button class="filter-chip" data-filter="esportes">Esportes & Lutas</button>
-            <button class="filter-chip" data-filter="filmes">Filmes & Séries</button>
-            <button class="filter-chip" data-filter="variedades">Variedades, Notícias & Kids</button>
-          </div>
-
-          <div class="channels-grid" id="channelsGrid">
-            <div class="channel-tile" data-cat="esportes" style="--tile-accent:#16a34a;">PREMIERE</div>
-            <div class="channel-tile" data-cat="esportes" style="--tile-accent:#2563eb;">SPORTV</div>
-            <div class="channel-tile" data-cat="esportes" style="--tile-accent:#dc2626;">ESPN</div>
-            <div class="channel-tile" data-cat="esportes" style="--tile-accent:#b91c1c;">COMBATE</div>
-            <div class="channel-tile" data-cat="esportes" style="--tile-accent:#7c3aed;">GE TV</div>
-            <div class="channel-tile" data-cat="esportes" style="--tile-accent:#ea580c;">DISCOVERY TURBO</div>
-
-            <div class="channel-tile" data-cat="filmes" style="--tile-accent:#e11d48;">TELECINE</div>
-            <div class="channel-tile" data-cat="filmes" style="--tile-accent:#4f46e5;">UNIVERSAL+</div>
-            <div class="channel-tile" data-cat="filmes" style="--tile-accent:#db2777;">SONY ONE</div>
-            <div class="channel-tile" data-cat="filmes" style="--tile-accent:#1e293b;">TNT</div>
-            <div class="channel-tile" data-cat="filmes" style="--tile-accent:#6d28d9;">TNT SERIES</div>
-            <div class="channel-tile" data-cat="filmes" style="--tile-accent:#0284c7;">MEGAPIX</div>
-            <div class="channel-tile" data-cat="filmes" style="--tile-accent:#334155;">AMC</div>
-            <div class="channel-tile" data-cat="filmes" style="--tile-accent:#0369a1;">UNIVERSAL TV</div>
-            <div class="channel-tile" data-cat="filmes" style="--tile-accent:#475569;">STUDIO UNIVERSAL</div>
-            <div class="channel-tile" data-cat="filmes" style="--tile-accent:#1d4ed8;">USA</div>
-            <div class="channel-tile" data-cat="filmes" style="--tile-accent:#ea580c;">SPACE</div>
-            <div class="channel-tile" data-cat="filmes" style="--tile-accent:#991b1b;">TCM</div>
-
-            <div class="channel-tile" data-cat="variedades" style="--tile-accent:#0ea5e9;">DISCOVERY</div>
-            <div class="channel-tile" data-cat="variedades" style="--tile-accent:#9333ea;">MULTISHOW</div>
-            <div class="channel-tile" data-cat="variedades" style="--tile-accent:#0891b2;">HGTV</div>
-            <div class="channel-tile" data-cat="variedades" style="--tile-accent:#2563eb;">GNT</div>
-            <div class="channel-tile" data-cat="variedades" style="--tile-accent:#dc2626;">TLC</div>
-            <div class="channel-tile" data-cat="variedades" style="--tile-accent:#be123c;">ID</div>
-            <div class="channel-tile" data-cat="variedades" style="--tile-accent:#d97706;">FOOD NETWORK</div>
-            <div class="channel-tile" data-cat="variedades" style="--tile-accent:#15803d;">ANIMAL PLANET</div>
-            <div class="channel-tile" data-cat="variedades" style="--tile-accent:#c2410c;">H&amp;H</div>
-            <div class="channel-tile" data-cat="variedades" style="--tile-accent:#dc2626;">CNN BRASIL</div>
-            <div class="channel-tile" data-cat="variedades" style="--tile-accent:#991b1b;">GLOBONEWS</div>
-            <div class="channel-tile" data-cat="variedades" style="--tile-accent:#e11d48;">GLOOB</div>
-            <div class="channel-tile" data-cat="variedades" style="--tile-accent:#16a34a;">DISCOVERY KIDS</div>
-            <div class="channel-tile" data-cat="variedades" style="--tile-accent:#0d9488;">CANAL OFF</div>
-          </div>
+          <a href="https://wa.me/5521990862337?text=Ol%C3%A1!%20Quero%20saber%20como%20incluir%20HBO%20MAX%20no%20meu%20plano%20Alta%20Link." target="_blank" rel="noopener" class="btn btn-gold btn-sm">
+            Falar pelo WhatsApp
+          </a>
         </div>
       </div>
     </section>
 
-    <!-- SOLUÇÕES CORPORATIVAS (Institucional estilo Golden Link) -->
+    <!-- SOLUÇÕES CORPORATIVAS -->
     <section class="section corporate-section" id="empresas">
       <div class="container">
         <div class="corporate-card reveal">
@@ -647,7 +573,6 @@
     <!-- CONSULTA DE VIABILIDADE + FAQ -->
     <section class="section faq-coverage-section" id="faq">
       <div class="container coverage-faq-grid">
-        <!-- Consulta Rápida de Cobertura -->
         <div class="coverage-box reveal">
           <span class="section-tag">VIABILIDADE TÉCNICA</span>
           <h3>Verifique se a Alta Link já chegou na sua rua</h3>
@@ -679,7 +604,6 @@
           </form>
         </div>
 
-        <!-- Perguntas Frequentes (Accordion) -->
         <div class="faq-box reveal">
           <span class="section-tag">PERGUNTAS FREQUENTES</span>
           <h3>Tire suas dúvidas sobre a Alta Link</h3>
@@ -761,8 +685,8 @@
           <li><a href="#inicio">Início</a></li>
           <li><a href="#diferenciais">Diferenciais</a></li>
           <li><a href="#planos">Planos & Combos</a></li>
-          <li><a href="#alta-tv">Alta TV & Streaming</a></li>
           <li><a href="#empresas">Soluções Empresariais</a></li>
+          <li><a href="#faq">Dúvidas & Cobertura</a></li>
         </ul>
       </div>
 
