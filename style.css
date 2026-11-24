@@ -278,13 +278,13 @@ img, svg {
 }
 
 .logo-svg {
-  height: 46px;
+  height: 64px; /* era 46px */
   width: auto;
   display: block;
 }
 
 .logo-img {
-  height: 50px;
+  height: 68px; /* era 50px */
   width: auto;
   display: block;
   mix-blend-mode: lighten;
@@ -732,18 +732,27 @@ img, svg {
   box-shadow: 0 24px 64px rgba(0, 0, 0, 0.65), 0 0 40px rgba(226, 174, 91, 0.16);
 }
 
-.plan-top-badge {
+.plan-top-badges {
   position: absolute;
   top: -15px;
   left: 50%;
   transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: max-content;
+  max-width: calc(100% - 20px);
+}
+
+.plan-top-badge {
   background: var(--gold-gradient);
   color: #080b14;
   font-family: "Outfit", sans-serif;
   font-weight: 800;
-  font-size: 0.74rem;
-  letter-spacing: 0.08em;
-  padding: 6px 18px;
+  font-size: 0.72rem;
+  letter-spacing: 0.07em;
+  padding: 6px 14px;
   border-radius: 999px;
   white-space: nowrap;
   box-shadow: 0 8px 20px rgba(226, 174, 91, 0.35);
@@ -968,6 +977,21 @@ img, svg {
 .channel-logo-item.dark-logo img,
 .channel-logo-item img[src*="sonyone"] {
   transform: scale(1.45);
+  object-fit: cover;
+}
+
+/* Fundo escuro sem zoom para logos de texto branco (Itaú Cultural Play) */
+.channel-logo-item:has(img[src*="itau"]) {
+  background: #0b0e18;
+}
+
+/* Zoom ajustado para preencher a pílula na logo FitDance */
+.channel-logo-item:has(img[src*="fitdance"]) {
+  padding: 0;
+}
+
+.channel-logo-item img[src*="fitdance"] {
+  transform: scale(1);
   object-fit: cover;
 }
 
@@ -1565,7 +1589,7 @@ img, svg {
 
   .logo-svg,
   .logo-img {
-    height: 40px;
+    height: 60px;
   }
 
   .nav-actions .btn-sm {
@@ -1688,7 +1712,7 @@ img, svg {
 @media (max-width: 380px) {
   .logo-svg,
   .logo-img {
-    height: 34px;
+    height: 54px;
   }
 
   .nav-actions .btn-sm {
@@ -1707,9 +1731,14 @@ img, svg {
     grid-template-columns: 1fr;
   }
 
+  .plan-top-badges {
+    gap: 5px;
+  }
+
   .plan-top-badge {
-    font-size: 0.68rem;
-    padding: 5px 12px;
+    font-size: 0.6rem;
+    letter-spacing: 0.03em;
+    padding: 5px 9px;
   }
 }
 
